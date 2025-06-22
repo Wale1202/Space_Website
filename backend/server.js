@@ -2,13 +2,20 @@ require('dotenv').config();
 const express  = require('express');
 const axios = require('axios');
 const cors = require('cors');
-
+const routes = require('./routes/routes');
 const app = express();
-const PORT = process.env.port || 5000;
-const NASA_API_KEY = process.env.NASA_API_KEY
-const NASA_BASE_URL = 'https://api.nasa.gov'
+const PORT = process.env.PORT || 5001;
 
 app.use(cors());
 app.use(express.json());
 
-app.get('/')
+app.use('/api', routes);
+
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({ error: 'Something went wrong!' });
+});
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
