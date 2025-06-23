@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:5001/api/nasa';
+const API_BASE_URL = 'http://localhost:10000';
 
 export const fetchAPOD = async (date) => {
   const url = `${API_BASE_URL}/apod${date ? `?date=${date}` : ''}`;
