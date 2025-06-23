@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:10000';
+const API_BASE_URL = 'https://space-website-911e.onrender.com';
 
 export const fetchAPOD = async (date) => {
   const url = `${API_BASE_URL}/apod${date ? `?date=${date}` : ''}`;
