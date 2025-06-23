@@ -10,7 +10,7 @@ function App() {
   useEffect(() => {
     const fetchAPOD = async () => {
       try {
-        const response = await axios.get('/apod');
+        const response = await axios.get('/api/apod');
         setApodData(response.data);
       } catch (err) {
         setError(err.message);
