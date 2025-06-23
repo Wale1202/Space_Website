@@ -10,7 +10,7 @@ function App() {
   useEffect(() => {
     const fetchAPOD = async () => {
       try {
-        const response = await axios.get('https://space-website-911e.onrender.com');
+        const response = await axios.get('https://space-website-911e.onrender.com/api/apod');
         setApodData(response.data);
       } catch (err) {
         setError(err.message);
@@ -52,5 +52,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
