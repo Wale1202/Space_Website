@@ -4,7 +4,7 @@ const axios = require('axios');
 const cors = require('cors');
 const routes = require('./routes/routes');
 const app = express();
-const PORT = process.env.PORT || 5001;
+const PORT = process.env.PORT || 10000;
 
 // Right after require statements:
 console.log('NASA_API_KEY exists?', !!process.env.NASA_API_KEY); 
