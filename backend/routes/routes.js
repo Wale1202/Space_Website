@@ -3,6 +3,9 @@ const router = express.Router();
 const { getAPOD} = require('../controllers/controller');
 
 // API
-router.get('/api/apod',getAPOD);
+router.get('/apod',getAPOD);
+
+router.get('/test', (req, res) => res.json({ message: "Router is working"}));
+
 
 module.exports = router;
