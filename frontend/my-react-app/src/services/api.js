@@ -1,25 +1,31 @@
+import axios from 'axios';
 const API_BASE_URL = 'https://space-website-911e.onrender.com/api';
 
-export const fetchAPOD = async (date) => {
-  const url = `${API_BASE_URL}/apod${date ? `?date=${date}` : ''}`;
-  const response = await fetch(url);
-  if (!response.ok) {
-    throw new Error('Failed to fetch APOD data');
+// Create axios instance with base URL and default config
+const api = axios.create({
+  baseURL: '/api',
+  timeout: 10000,
+  headers: {
+    'Content-Type': 'application/json'
   }
-  return response.json();
+});
+
+// Add response interceptor for error handling
+api.interceptors.response.use(
+  response => response.data,
+  error => {
+    const errorMessage = error.response?.data?.message || error.message || 'Unknown error occurred';
+    console.error('API Error:', errorMessage);
+    return Promise.reject(new Error(errorMessage));
+  }
+);
+/**
+ * Fetch Astronomy Picture of the Day
+ * @param {Object} params - Query parameters
+ * @returns {Promise<Object>} APOD data
+ */
+export const fetchAPOD = async (params = {}) => {
+  return api.get('/apod', {params});
 };
 
-// export const fetchMarsPhotos = async (rover, earth_date, camera) => {
-//   let url = `${API_BASE_URL}/mars-photos/${rover}`;
-//   const params = new URLSearchParams();
-//   if (earth_date) params.append('earth_date', earth_date);
-//   if (camera) params.append('camera', camera);
-  
-//   if (params.toString()) url += `?${params.toString()}`;
-  
-//   const response = await fetch(url);
-//   if (!response.ok) {
-//     throw new Error('Failed to fetch Mars photos');
-//   }
-//   return response.json();
-// };
+export default api;
