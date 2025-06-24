@@ -1,7 +1,7 @@
 {
   "name": "my-react-app",
   "version": "0.1.0",
-  "proxy": "http://localhost:5001",
+  "proxy": "https://space-website-911e.onrender.com/api",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
