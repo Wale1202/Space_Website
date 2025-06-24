@@ -12,7 +12,10 @@ app.use(cors());
 app.use(express.json());
 
 //app.use('/api', routes);
-app.use('/api', routes);
+app.use('/api', (req, res, next) => {
+  console.log('Incoming API request to:', req.path);
+  routes(req, res, next);
+});
 
 // Serve static files from the React app in production
 if (process.env.NODE_ENV === 'production') {
