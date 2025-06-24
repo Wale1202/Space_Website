@@ -8,10 +8,10 @@ router.get('/', (req, res) => {
   res.json({ 
     status: 'API is working',
     message: 'Welcome to NASA API Explorer',
-    endpoints: {
-      apod: '/api/apod',
-      test: '/api/test'
-    }
+    // endpoints: {
+    //   apod: '/',
+    //   test: '/'
+    // }
   });
 });
 router.get('/apod',getAPOD);
