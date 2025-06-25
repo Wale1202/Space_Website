@@ -2,10 +2,10 @@ const express = require('express');
 const router = express.Router();
 const { 
   getAPOD, 
-  getMarsPhotos, 
-  getEPIC, 
-  getNeoWs, 
-  searchNasaLibrary 
+  //getMarsPhotos, 
+  //getEPIC, 
+  //getNeoWs, 
+  //searchNasaLibrary 
 } = require('../controllers/controller');
 
 // API
