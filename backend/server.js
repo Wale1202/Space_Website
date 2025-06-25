@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express  = require('express');
+//const router = express.Router();
 const axios = require('axios');
 const cors = require('cors');
 const path = require('path');
@@ -12,10 +13,7 @@ app.use(cors());
 app.use(express.json());
 
 //app.use('/api', routes);
-app.use('/api', (req, res, next) => {
-  console.log('Incoming API request to:', req.path);
-  routes(req, res, next);
-});
+app.use('/api', routes);
 
 // Serve static files from the React app in production
 if (process.env.NODE_ENV === 'production') {
