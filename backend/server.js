@@ -16,7 +16,6 @@ app.use('/api', (req, res, next) => {
   console.log('Incoming API request to:', req.path);
   next();
 });
-
 //app.use('/api', routes);
 app.use('/api', routes);
 

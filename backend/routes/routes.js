@@ -16,6 +16,8 @@ router.get('/apod', getAPOD);
 // router.get('/epic', getEPIC);
 // router.get('/neows', getNeoWs);
 // router.get('/search', searchNasaLibrary);
+console.log('ROUTES:', router.stack.map(r => r.route?.path));
+
 
 
 module.exports = router;
