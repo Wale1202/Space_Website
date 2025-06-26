@@ -1,5 +1,5 @@
 import axios from 'axios';
-const API_BASE_URL = 'https://space-website-911e.onrender.com/api';
+//const API_BASE_URL = 'https://space-website-911e.onrender.com/api';
 
 // Create axios instance with base URL and default config
 const api = axios.create({
