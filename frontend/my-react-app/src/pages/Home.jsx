@@ -126,15 +126,14 @@ const Home = () => {
           <h2 className="section-title">About This Project</h2>
           <p>
             This application was built using React for the frontend and Node.js with Express for the backend. 
-            It leverages NASA's Open APIs to provide an interactive and educational experience about space.
+            It leverages NASA's Open APIs to provide interactive space features.
           </p>
           <p>
             The project demonstrates modern web development practices including responsive design, 
             API integration, data visualization, and user interactivity.
           </p>
           <p>
-            All data is sourced directly from NASA's publicly available APIs. This application is not 
-            affiliated with or endorsed by NASA.
+            All data is sourced directly from NASA's publicly available APIs. 
           </p>
         </div>
       </section>

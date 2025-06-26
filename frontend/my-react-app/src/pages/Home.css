@@ -22,7 +22,7 @@
 .hero-title {
   font-size: 3.5rem;
   font-weight: 800;
-  color: #0c1929;
+  color:#4B0082;
   margin-bottom: 1rem;
   line-height: 1.2;
   background: linear-gradient(90deg, #0c1929, #0284c7);
@@ -33,7 +33,7 @@
 
 .hero-subtitle {
   font-size: 1.25rem;
-  color: #475569;
+  color: #452c63;
   line-height: 1.6;
 }
 
@@ -93,7 +93,7 @@
 .section-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #0c1929;
+  color: #1d1160;
   text-align: center;
   margin-bottom: 3rem;
   position: relative;
@@ -237,7 +237,7 @@
   margin-bottom: 1.5rem;
 }
 
-/* Responsive Adjustments */
+/* For Responsive Adjustments */
 @media (max-width: 768px) {
   .hero-title {
     font-size: 2.5rem;
@@ -278,7 +278,7 @@
   }
 }
 
-/* Dark mode support */
+/* For Dark mode */
 @media (prefers-color-scheme: dark) {
   .hero-title {
     background: linear-gradient(90deg, #38bdf8, #0284c7);

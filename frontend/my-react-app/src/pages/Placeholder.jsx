@@ -21,7 +21,7 @@ const Placeholder = (title, description) => {
         <p className="placeholder-description">{description}</p>
         <div className="placeholder-message">
           <p>This feature is coming soon!</p>
-          <p>We're working hard to bring you this exciting NASA data visualization.</p>
+          <p>Keep checking for Updates.</p>
         </div>
         <div className="placeholder-actions">
           <Link to="/" className="placeholder-button">
