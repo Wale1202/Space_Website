@@ -1,70 +1,178 @@
-# Getting Started with Create React App
+# Space Explorer Web Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This full-stack web application features:
+
+- Astronomy Picture of the Day (APOD)
+- Mars Rover Photos
+- Earth Imagery (EPIC)(Coming Soon)
+- Near Earth Objects tracking(Coming Soon)
+- NASA Image Search(Coming Soon)
+
+Built with **React** for the frontend and **Node.js/Express** for the backend, using NASA's public APIs.
+
+**Deployment:**
+- Backend: Deployed on [Render](https://render.com/) — [YOUR_RENDER_URL_HERE]
+- Frontend: Deployed on [Vercel](https://vercel.com/) — [YOUR_VERCEL_URL_HERE]
+
+---
+
+## Table of Contents
+
+- [Features](#features)
+- [Project Structure](#project-structure)
+- [Prerequisites](#prerequisites)
+- [Setup Instructions](#setup-instructions)
+  - [Backend Setup](#backend-setup)
+  - [Frontend Setup](#frontend-setup)
+- [Usage](#usage)
+- [Environment Variables](#environment-variables)
+- [Available Scripts](#available-scripts)
+- [Deployment](#deployment)
+- [Troubleshooting](#troubleshooting)
+- [License](#license)
+
+---
+
+## Features
+
+- **Astronomy Picture of the Day:** You can view NASA's daily featured image with explanations.
+- **Mars Rover Photos:** You can Browse images from Curiosity, Opportunity, Spirit, and Perseverance.
+- **Earth Imagery:** Coming Soon
+- **Near Earth Objects:** Coming Soon.
+- **NASA Image Search:** Coming Soon.
+
+---
+
+## Project Structure
+
+```
+root/
+  backend/         # Express backend server
+  frontend/
+    my-react-app/  # React frontend application
+```
+
+---
+
+## Prerequisites
+
+- [Node.js](https://nodejs.org/) (v16 or higher recommended)
+- [Yarn](https://yarnpkg.com/) or [npm](https://www.npmjs.com/)
+- [Express](https://expressjs.com/en/4x/api.html)
+- NASA API Key (free from https://api.nasa.gov/)
+
+---
+
+## Setup Instructions
+
+### Backend Setup
+
+1. **Navigate to the backend directory:**
+   ```bash
+   cd backend
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   yarn install
+   # or
+   npm install
+   ```
+
+3. **Create a `.env` file in the backend directory:**
+   ```
+   NASA_API_KEY=your_nasa_api_key_here
+   PORT=3001
+   NODE_ENV=development
+   ```
+   - Replace `nasa_api_key_here` with your actual NASA API key.
+   - The default port is `3001`, but you can change it if needed.
+
+4. **Start the backend server:**
+   ```bash
+   node server.js
+   ```
+   - The API will be available at `http://localhost:5001/api`.
+
+---
+
+### Frontend Setup
+
+1. **Navigate to the frontend React app directory:**
+   ```bash
+   cd frontend/my-react-app
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   yarn install
+   # or
+   npm install
+   ```
+
+3. **Start the React development server:**
+   ```bash
+   yarn start
+   # or
+   npm start
+   ```
+   - The app will open at [http://localhost:3000](http://localhost:3000).
+   - The frontend is configured to proxy API requests to the backend.
+
+---
+
+## Usage
+
+- Open [http://localhost:3000](http://localhost:3000) in your browser.
+- Explore the homepage for featured space content.
+- Use the navigation to access APOD, Mars Rover, Earth Imagery, Near Earth Objects, and NASA Image Search.
+- If you encounter errors loading data, ensure your backend server is running and your NASA API key is valid.
+
+---
+
+## Environment Variables
+
+**Backend (`backend/.env`):**
+- `NASA_API_KEY` (required): Your NASA API key.
+- `PORT` (optional): Port for the backend server (default: 3001).
+- `NODE_ENV` (optional): Set to `production` for production builds.
+
+**Frontend:** No environment variables are required for local development. The proxy is set in `package.json`.
+
+---
 
 ## Available Scripts
 
-In the project directory, you can run:
+### Frontend
 
-### `npm start`
+- `yarn start` / `npm start` — Start the React development server.
+- `yarn build` / `npm run build` — Build the app for production.
+- `yarn test` / `npm test` — Run tests.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Backend
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- `node server.js` — Start the backend server.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Deployment
 
-### `npm run build`
+- **Backend:** Deployed on [Render](https://render.com/). [Live API: YOUR_RENDER_URL_HERE]
+- **Frontend:** Deployed on [Vercel](https://vercel.com/). [Live App: YOUR_VERCEL_URL_HERE]
+- For local production, build the frontend (`yarn build`), then serve the static files from the backend server.
+- Set `NODE_ENV=production` in your backend `.env` file.
+- The backend will serve the React build and handle API requests if you deploy both together.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Troubleshooting
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **API errors:** Ensure your NASA API key is correct and not rate-limited.
+- **CORS issues:** The backend handles CORS for local development.
+- **Port conflicts:** Change the `PORT` in `.env` if needed.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## License
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is for educational purposes and is not affiliated with or endorsed by NASA.

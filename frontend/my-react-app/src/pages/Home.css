@@ -22,10 +22,10 @@
 .hero-title {
   font-size: 3.5rem;
   font-weight: 800;
-  color:#4B0082;
+  color:#720e9e;
   margin-bottom: 1rem;
   line-height: 1.2;
-  background: linear-gradient(90deg, #0c1929, #0284c7);
+  background: linear-gradient(90deg, #33006F, #33006F);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
