@@ -1,0 +1,240 @@
+.mars-rover-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.mars-rover-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.mars-rover-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0c1929;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.mars-rover-title::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, #f97316, #c2410c);
+  border-radius: 3px;
+}
+
+.mars-rover-subtitle {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.mars-rover-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background-color: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 200px;
+}
+
+.filter-group label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #334155;
+}
+
+.filter-group select,
+.filter-group input {
+  padding: 0.5rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  color: #334155;
+  background-color: white;
+}
+
+.filter-group select:focus,
+.filter-group input:focus {
+  outline: none;
+  border-color: #f97316;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2);
+}
+
+.filter-group input:disabled {
+  background-color: #f1f5f9;
+  cursor: not-allowed;
+}
+
+.mars-rover-no-results {
+  text-align: center;
+  padding: 3rem;
+  background-color: #f8fafc;
+  border-radius: 0.5rem;
+  color: #64748b;
+}
+
+.mars-rover-results {
+  margin-top: 2rem;
+}
+
+.mars-rover-count {
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: #475569;
+}
+
+.mars-rover-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.mars-rover-photo-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.mars-rover-photo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.mars-rover-photo {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.mars-rover-photo-info {
+  padding: 1rem;
+}
+
+.mars-rover-photo-info p {
+  margin: 0.5rem 0;
+  font-size: 0.875rem;
+  color: #475569;
+}
+
+.mars-rover-loading-more {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.mars-rover-load-more {
+  display: block;
+  width: 200px;
+  margin: 2rem auto;
+  padding: 0.75rem 1.5rem;
+  background-color: #f97316;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.mars-rover-load-more:hover {
+  background-color: #ea580c;
+}
+
+.mars-rover-load-more:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.3);
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .mars-rover-title {
+    color: #f1f5f9;
+  }
+  
+  .mars-rover-subtitle {
+    color: #cbd5e1;
+  }
+  
+  .mars-rover-filters {
+    background-color: #1e293b;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  }
+  
+  .filter-group label {
+    color: #e2e8f0;
+  }
+  
+  .filter-group select,
+  .filter-group input {
+    border-color: #334155;
+    color: #e2e8f0;
+    background-color: #0f172a;
+  }
+  
+  .filter-group input:disabled {
+    background-color: #1e293b;
+  }
+  
+  .mars-rover-no-results {
+    background-color: #1e293b;
+    color: #94a3b8;
+  }
+  
+  .mars-rover-count {
+    color: #cbd5e1;
+  }
+  
+  .mars-rover-photo-card {
+    background-color: #1e293b;
+  }
+  
+  .mars-rover-photo-info p {
+    color: #cbd5e1;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .mars-rover-title {
+    font-size: 2rem;
+  }
+  
+  .mars-rover-filters {
+    flex-direction: column;
+  }
+  
+  .filter-group {
+    width: 100%;
+  }
+  
+  .mars-rover-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .mars-rover-grid {
+    grid-template-columns: 1fr;
+  }
+}
