@@ -1,0 +1,145 @@
+.apod-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.apod-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.apod-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0c1929;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.apod-title::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, #38bdf8, #0284c7);
+  border-radius: 3px;
+}
+
+.apod-subtitle {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.apod-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.apod-date-picker {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.apod-date-picker label {
+  font-weight: 500;
+  color: #334155;
+}
+
+.apod-date-picker input {
+  padding: 0.5rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  color: #334155;
+  background-color: #f8fafc;
+}
+
+.apod-date-picker input:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+}
+
+.apod-random-button {
+  background-color: #0284c7;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.apod-random-button:hover {
+  background-color: #0369a1;
+}
+
+.apod-random-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.3);
+}
+
+.apod-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .apod-title {
+    color: #f1f5f9;
+  }
+  
+  .apod-subtitle {
+    color: #cbd5e1;
+  }
+  
+  .apod-date-picker label {
+    color: #e2e8f0;
+  }
+  
+  .apod-date-picker input {
+    border-color: #334155;
+    color: #e2e8f0;
+    background-color: #1e293b;
+  }
+  
+  .apod-date-picker input:focus {
+    border-color: #38bdf8;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .apod-title {
+    font-size: 1.75rem;
+  }
+  
+  .apod-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .apod-date-picker {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .apod-date-picker input {
+    width: 100%;
+  }
+}

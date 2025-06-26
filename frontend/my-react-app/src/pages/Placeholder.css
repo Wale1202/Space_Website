@@ -1,0 +1,145 @@
+.placeholder-page {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  background-color: #0c1929;
+  color: white;
+}
+
+.placeholder-content {
+  text-align: center;
+  max-width: 600px;
+  z-index: 2;
+  padding: 3rem;
+  background-color: rgba(15, 23, 42, 0.7);
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.placeholder-icon {
+  color: #38bdf8;
+  margin-bottom: 1.5rem;
+}
+
+.placeholder-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #f1f5f9;
+}
+
+.placeholder-description {
+  font-size: 1.25rem;
+  color: #94a3b8;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.placeholder-message {
+  background-color: rgba(56, 189, 248, 0.1);
+  border-left: 4px solid #38bdf8;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: left;
+  border-radius: 0.25rem;
+}
+
+.placeholder-message p {
+  margin: 0.5rem 0;
+  color: #cbd5e1;
+}
+
+.placeholder-message p:first-child {
+  font-weight: 600;
+  color: #f1f5f9;
+}
+
+.placeholder-actions {
+  margin-top: 2rem;
+}
+
+.placeholder-button {
+  display: inline-block;
+  background-color: #0284c7;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.placeholder-button:hover {
+  background-color: #0369a1;
+}
+
+.placeholder-stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background-color: white;
+  border-radius: 50%;
+  animation: twinkle linear infinite;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .placeholder-title {
+    font-size: 2rem;
+  }
+  
+  .placeholder-description {
+    font-size: 1.125rem;
+  }
+  
+  .placeholder-content {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .placeholder-title {
+    font-size: 1.75rem;
+  }
+  
+  .placeholder-description {
+    font-size: 1rem;
+  }
+  
+  .placeholder-content {
+    padding: 1.5rem;
+  }
+  
+  .placeholder-message {
+    padding: 1rem;
+  }
+}
