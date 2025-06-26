@@ -11,8 +11,8 @@ This full-stack web application features:
 Built with **React** for the frontend and **Node.js/Express** for the backend, using NASA's public APIs.
 
 **Deployment:**
-- Backend: Deployed on [Render](https://render.com/) — [YOUR_RENDER_URL_HERE]
-- Frontend: Deployed on [Vercel](https://vercel.com/) — [YOUR_VERCEL_URL_HERE]
+- Backend: Deployed on [Render](https://render.com/) — [https://space-website-911e.onrender.com]
+- Frontend: Deployed on [Vercel](https://vercel.com/) — [https://space-website-ouj6-n3g35ied2-walles-projects-c05c26fc.vercel.app/]
 
 ---
 
@@ -157,8 +157,8 @@ root/
 
 ## Deployment
 
-- **Backend:** Deployed on [Render](https://render.com/). [Live API: YOUR_RENDER_URL_HERE]
-- **Frontend:** Deployed on [Vercel](https://vercel.com/). [Live App: YOUR_VERCEL_URL_HERE]
+- **Backend:** Deployed on [Render](https://render.com/). [Live API: https://space-website-911e.onrender.com]
+- **Frontend:** Deployed on [Vercel](https://vercel.com/). [Live App: https://space-website-ouj6-n3g35ied2-walles-projects-c05c26fc.vercel.app/]
 - For local production, build the frontend (`yarn build`), then serve the static files from the backend server.
 - Set `NODE_ENV=production` in your backend `.env` file.
 - The backend will serve the React build and handle API requests if you deploy both together.
@@ -167,9 +167,9 @@ root/
 
 ## Troubleshooting
 
-- **API errors:** Ensure your NASA API key is correct and not rate-limited.
+- **API errors:** Make sure your NASA API key is correct and not rate-limited.
 - **CORS issues:** The backend handles CORS for local development.
-- **Port conflicts:** Change the `PORT` in `.env` if needed.
+- **Port conflicts:** Change the `PORT` in `.env` if needed and for this project the port was 10000 not the usual 5000.
 
 ---
 
