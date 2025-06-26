@@ -2,8 +2,8 @@ import axios from 'axios';
 //const API_BASE_URL = 'https://space-website-911e.onrender.com/api';
 
 const API_BASE_URL = process.env.NODE_ENV === 'production'
-  ? 'https://space-website-911e.onrender.com/api'
-  : 'http://localhost:3001/api';
+  ? 'https://space-website-911e.onrender.com'
+  : 'http://localhost:3001';
 
 // Create axios instance with base URL and default config
 const api = axios.create({
