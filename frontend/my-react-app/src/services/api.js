@@ -7,7 +7,7 @@ const API_BASE_URL = process.env.NODE_ENV === 'production'
 
 // Create axios instance with base URL and default config
 const api = axios.create({
-  baseURL: `${API_BASE_URL}/api`,
+  baseURL: 'http://localhost:10000/api',
   timeout: 10000,
   headers: {
     'Content-Type': 'application/json'
